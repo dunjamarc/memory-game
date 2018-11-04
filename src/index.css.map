@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,CAAE;EACE,UAAU,EAAE,UAAU;;AAG1B,UAAW;EACP,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,MAAM;EAEd,eAAK;IACD,KAAK,EAAE,IAAI;IAEX,8BAAgB;MACZ,UAAU,EAAE,EAAE;IAGlB,mBAAI;MACA,OAAO,EAAE,YAAY;MACrB,KAAK,EAAE,aAAa;MACpB,WAAW,EAAE,aAAa;MAC1B,MAAM,EAAE,cAAc;MAEtB,kCAAgB;QACZ,WAAW,EAAE,EAAE",
+"sources": ["app/style/index.scss"],
 "names": [],
 "file": "index.css"
 }

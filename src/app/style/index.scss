@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 940px;
+    max-height: 940px;
+    margin: 0 auto;
+
+    .row {
+        width: 100%;
+
+        &:nth-child(n+2){
+            margin-top: 5%;
+        }
+
+        div {
+            display: inline-block;
+            width: calc(85% / 4);
+            padding-top: calc(85% / 4);
+            border: 1px solid gray;
+
+            &:nth-child(n+2){
+                margin-left: 5%;
+            }
+        }
+    }
+}

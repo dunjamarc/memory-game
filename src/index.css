@@ -1,3 +1,20 @@
+* {
+  box-sizing: border-box; }
 
+.container {
+  max-width: 940px;
+  max-height: 940px;
+  margin: 0 auto; }
+  .container .row {
+    width: 100%; }
+    .container .row:nth-child(n+2) {
+      margin-top: 5%; }
+    .container .row div {
+      display: inline-block;
+      width: calc(85% / 4);
+      padding-top: calc(85% / 4);
+      border: 1px solid gray; }
+      .container .row div:nth-child(n+2) {
+        margin-left: 5%; }
 
 /*# sourceMappingURL=index.css.map */
