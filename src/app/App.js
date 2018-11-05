@@ -7,7 +7,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			search: [
+			images: [
 				"https://media.cntraveler.com/photos/58de89946c3567139f9b6cca/4:3/w_480,c_limit/GettyImages-468366251.jpg",
 				"https://media.cntraveler.com/photos/58de89946c3567139f9b6cca/4:3/w_480,c_limit/GettyImages-468366251.jpg",
 				"https://www.100resilientcities.org/wp-content/uploads/2017/06/London-hero-crop.jpg",
@@ -28,12 +28,37 @@ class App extends Component {
 		};
 	}
 
+	componentDidMount() {
+
+		let shuffleImg = this.shuffle(this.state.images);
+		this.setState({
+			images: shuffleImg
+		})
+	}
+
+	shuffle = array => {
+		let currentI = array.length;
+		let tempValue;
+		let randomI;
+
+		while (currentI > 0) {
+
+			randomI = Math.floor(Math.random() * currentI);
+			currentI--;
+
+			tempValue = array[currentI];
+			array[currentI] = array[randomI];
+			array[randomI] = tempValue;
+		}
+		return array;
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<div className="grid-container">
-					{this.state.search.map((el, i) => {
-						return (<Card value={el} key={i}/>)
+					{this.state.images.map((el, i) => {
+						return (<Card value={el} key={i} />)
 					})}
 				</div>
 			</div>
