@@ -12,7 +12,8 @@
   .grid-container .grid-item {
     border: 1px solid gray;
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    cursor: pointer; }
     .grid-container .grid-item:after {
       content: '?';
       background-color: rgba(80, 175, 175, 0.8);
@@ -21,6 +22,7 @@
       height: 75%;
       text-align: center;
       font-size: 3em;
-      padding-top: 25%; }
+      padding-top: 25%;
+      color: #000; }
 
 /*# sourceMappingURL=index.css.map */

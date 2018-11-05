@@ -53,12 +53,18 @@ class App extends Component {
 		return array;
 	}
 
+	handleClick = (event) => {        
+        
+
+        console.log(event.target.style.backgroundImage);
+    }
+
 	render() {
 		return (
 			<div className="App">
 				<div className="grid-container">
 					{this.state.images.map((el, i) => {
-						return (<Card value={el} key={i} />)
+						return (<Card value={el} key={i} handleClick={this.handleClick}/>)
 					})}
 				</div>
 			</div>

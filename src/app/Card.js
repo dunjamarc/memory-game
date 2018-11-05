@@ -6,8 +6,7 @@ const Card = (props) => {
     }
 
     return (
-
-        <div className="grid-item" style={background}>
+        <div href="#" className="grid-item" style={background} onClick={props.handleClick}>
         </div>
     )
 } 

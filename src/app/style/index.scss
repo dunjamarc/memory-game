@@ -15,6 +15,7 @@
         border: 1px solid gray;
         background-position: center;
         background-size: cover;
+        cursor: pointer;
 
         &:after {
             content: '?';
@@ -25,6 +26,7 @@
             text-align: center;
             font-size: 3em;
             padding-top: 25%;
+            color: #000;
         }
     }
 }
