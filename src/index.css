@@ -10,6 +10,8 @@
   width: 90vh;
   margin: 0 auto; }
   .grid-container .grid-item {
-    border: 1px solid gray; }
+    border: 1px solid gray;
+    background-position: center;
+    background-size: cover; }
 
 /*# sourceMappingURL=index.css.map */
