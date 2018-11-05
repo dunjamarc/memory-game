@@ -5,31 +5,23 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<div className="container">
-					<div className="row">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div className="row">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div className="row">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div className="row">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
+				<div className="grid-container">
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
+					<div className="grid-item"></div>
 				</div>
 			</div>
 		);

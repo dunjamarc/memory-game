@@ -2,27 +2,16 @@
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 940px;
-    max-height: 940px;
+.grid-container {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    height: 90vh;
+    width: 90vh;
     margin: 0 auto;
 
-    .row {
-        width: 100%;
-
-        &:nth-child(n+2){
-            margin-top: 5%;
-        }
-
-        div {
-            display: inline-block;
-            width: calc(85% / 4);
-            padding-top: calc(85% / 4);
-            border: 1px solid gray;
-
-            &:nth-child(n+2){
-                margin-left: 5%;
-            }
-        }
+    .grid-item {
+        border: 1px solid gray;
     }
 }
