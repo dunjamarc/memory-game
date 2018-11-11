@@ -28,5 +28,16 @@
             padding-top: 25%;
             color: #000;
         }
+
+        &.reveal {
+
+            &.hide {
+                visibility: hidden;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
     }
 }

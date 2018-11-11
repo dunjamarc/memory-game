@@ -24,7 +24,8 @@ class App extends Component {
 				"https://s.inyourpocket.com/gallery/64940.jpg",
 				"http://nomadcapitalist.com/wp-content/uploads/2017/08/Kalemegdan.jpg",
 				"http://nomadcapitalist.com/wp-content/uploads/2017/08/Kalemegdan.jpg"
-			]
+			],
+			currentPair: []
 		};
 	}
 
@@ -54,9 +55,16 @@ class App extends Component {
 	}
 
 	handleClick = (event) => {        
-        
-
-        console.log(event.target.style.backgroundImage);
+		let el = event.target;
+		el.classList.add("reveal");
+		this.state.currentPair.push(el.style.backgroundImage);
+		if(this.state.currentPair.length > 1 && this.state.currentPair[0] === this.state.currentPair[1]){
+			let pair = document.querySelectorAll(".reveal");
+			pair.forEach((e) => e.classList.add("hide"));
+			this.setState({
+				currentPair: []
+			})
+		}
     }
 
 	render() {

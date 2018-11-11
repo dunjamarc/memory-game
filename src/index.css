@@ -24,5 +24,9 @@
       font-size: 3em;
       padding-top: 25%;
       color: #000; }
+    .grid-container .grid-item.reveal.hide {
+      visibility: hidden; }
+    .grid-container .grid-item.reveal:after {
+      display: none; }
 
 /*# sourceMappingURL=index.css.map */
