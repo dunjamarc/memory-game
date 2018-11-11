@@ -29,6 +29,9 @@ html, body, #root {
     background-size: cover;
     cursor: pointer;
     box-shadow: 0 0 0 1px gray;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -o-transition: all .7s;
     transition: all .7s; }
     .grid-container .grid-item:after {
       content: '?';
@@ -40,19 +43,45 @@ html, body, #root {
       font-size: 3em;
       padding-top: 25%;
       color: #fff;
+      -webkit-transition: all .7s;
+      -moz-transition: all .7s;
+      -o-transition: all .7s;
       transition: all .7s; }
     .grid-container .grid-item.reveal {
       cursor: unset;
       pointer-events: none;
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
       transform: rotateY(180deg);
+      -webkit-transition: all .7s;
+      -moz-transition: all .7s;
+      -o-transition: all .7s;
       transition: all .7s; }
       .grid-container .grid-item.reveal.hide {
         visibility: hidden;
         opacity: 0;
-        transition: visibility .5s linear ,opacity .5s linear; }
+        transition: visibility .5s linear, opacity .5s linear;
+        -webkit-transition: visibility .5s linear, opacity .5s linear;
+        -moz-transition: visibility .5s linear, opacity .5s linear;
+        -o-transition: visibility .5s linear, opacity .5s linear; }
       .grid-container .grid-item.reveal:after {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
         transform: rotateY(180deg);
+        -webkit-transition: all .7s;
+        -moz-transition: all .7s;
+        -o-transition: all .7s;
         transition: all .7s;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
         backface-visibility: hidden; }
+
+button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer; }
 
 /*# sourceMappingURL=index.css.map */

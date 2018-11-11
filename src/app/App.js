@@ -80,7 +80,9 @@ class App extends Component {
 				})
 			}, 1000);
 		}
-    }
+	}
+	
+	reloadPage = () => window.location.reload();
 
 	render() {
 		return (
@@ -90,6 +92,7 @@ class App extends Component {
 						return (<Card value={el} key={i} handleClick={this.handleClick}/>)
 					})}
 				</div>
+				<button onClick={this.reloadPage}>Play again</button>
 			</div>
 		);
 	}
