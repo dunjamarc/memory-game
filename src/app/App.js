@@ -58,12 +58,27 @@ class App extends Component {
 		let el = event.target;
 		el.classList.add("reveal");
 		this.state.currentPair.push(el.style.backgroundImage);
+
+		let pair = document.querySelectorAll(".reveal");
 		if(this.state.currentPair.length > 1 && this.state.currentPair[0] === this.state.currentPair[1]){
-			let pair = document.querySelectorAll(".reveal");
-			pair.forEach((e) => e.classList.add("hide"));
-			this.setState({
-				currentPair: []
-			})
+			setTimeout(() => {
+				pair.forEach(e => e.classList.add("hide"));
+				this.setState({
+					currentPair: []
+				})
+			}, 700);
+			
+		} else if(this.state.currentPair.length > 1 && this.state.currentPair[0] !== this.state.currentPair[1]){
+			setTimeout(() => {
+				pair.forEach(e => {
+					if(!e.classList.contains("hide")){
+						e.classList.remove("reveal");
+					}
+				});
+				this.setState({
+					currentPair: []
+				})
+			}, 700);
 		}
     }
 
