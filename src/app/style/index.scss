@@ -33,6 +33,7 @@ html, body, #root {
         background-size: cover;
         cursor: pointer;
         box-shadow: 0 0 0 1px gray;
+        transition: all .7s;
 
         &:after {
             content: '?';
@@ -44,21 +45,24 @@ html, body, #root {
             font-size: 3em;
             padding-top: 25%;
             color: #fff;
+            transition: all .7s;
         }
 
         &.reveal {
             cursor: unset;
             pointer-events: none;
             transform: rotateY(180deg);
-            transition: transform .7s;
+            transition: all .7s;
 
             &.hide {
                 visibility: hidden;
+                opacity: 0;
+                transition: visibility .5s linear ,opacity .5s linear;
             }
 
             &:after {
                 transform: rotateY(180deg);
-                transition: transform .7s;
+                transition: all .7s;
                 backface-visibility: hidden;
             }
         }
