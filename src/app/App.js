@@ -58,7 +58,7 @@ class App extends Component {
 		let el = event.target;
 		el.classList.add("reveal");
 		this.state.currentPair.push(el.style.backgroundImage);
-
+		
 		let pair = document.querySelectorAll(".reveal");
 		if(this.state.currentPair.length > 1 && this.state.currentPair[0] === this.state.currentPair[1]){
 			setTimeout(() => {

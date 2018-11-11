@@ -24,9 +24,12 @@
       font-size: 3em;
       padding-top: 25%;
       color: #000; }
-    .grid-container .grid-item.reveal.hide {
-      visibility: hidden; }
-    .grid-container .grid-item.reveal:after {
-      display: none; }
+    .grid-container .grid-item.reveal {
+      cursor: unset;
+      pointer-events: none; }
+      .grid-container .grid-item.reveal.hide {
+        visibility: hidden; }
+      .grid-container .grid-item.reveal:after {
+        display: none; }
 
 /*# sourceMappingURL=index.css.map */

@@ -30,6 +30,8 @@
         }
 
         &.reveal {
+            cursor: unset;
+            pointer-events: none;
 
             &.hide {
                 visibility: hidden;
