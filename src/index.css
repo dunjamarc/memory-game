@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Lobster', cursive; }
 
 html, body, #root {
   height: 100%;
@@ -79,9 +81,20 @@ html, body, #root {
         backface-visibility: hidden; }
 
 button {
-  background: none;
+  background: rgba(80, 175, 175, 0.7);
   border: none;
   font-size: 2em;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 5px 2px #fff;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+  padding: 0 10px 5px; }
+  button:active {
+    position: relative;
+    top: 2px; }
+  button:focus {
+    outline: none; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 * {
 	box-sizing: border-box;
+	font-family: 'Lobster', cursive;
 }
 
 html, body, #root {
@@ -93,8 +96,23 @@ html, body, #root {
 }
 
 button {
-	background: none;
+	background: rgba(80, 175, 175, .7);
 	border: none;
 	font-size: 2em;
 	cursor: pointer;
+	color: #fff;
+	box-shadow: 0 0 5px 2px #fff;
+	border-radius: 5px;
+	display: block;
+	margin: 10px auto;
+	padding: 0 10px 5px;
+
+	&:active {
+		position: relative;
+		top: 2px;
+	}
+
+	&:focus {
+		outline: none;
+	}
 }
