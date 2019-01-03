@@ -44,10 +44,10 @@ html, body, #root {
 		background-size: cover;
 		cursor: pointer;
 		box-shadow: 0 0 0 1px gray;
-		-webkit-transition: all .7s;
-		-moz-transition: all .7s;
-		-o-transition: all .7s;
-		transition: all .7s;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		-o-transition: all .3s;
+		transition: all .3s;
 		overflow: hidden;
 
 		&:after {
@@ -56,10 +56,10 @@ html, body, #root {
 			height: 100%;
 			font-size: 3em;
 			color: #fff;
-			-webkit-transition: all .7s;
-			-moz-transition: all .7s;
-			-o-transition: all .7s;
-			transition: all .7s;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			-o-transition: all .3s;
+			transition: all .3s;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -72,18 +72,17 @@ html, body, #root {
 			-moz-transform: rotateY(180deg);
 			-ms-transform: rotateY(180deg);
 			transform: rotateY(180deg);
-			-webkit-transition: all .7s;
-			-moz-transition: all .7s;
-			-o-transition: all .7s;
-			transition: all .7s;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			-o-transition: all .3s;
+			transition: all .3s;
 
 			&.hide {
-				visibility: hidden;
 				opacity: 0;
-				transition: visibility .5s linear, opacity .5s linear;
-				-webkit-transition: visibility .5s linear, opacity .5s linear;
-				-moz-transition: visibility .5s linear, opacity .5s linear;
-				-o-transition: visibility .5s linear, opacity .5s linear;
+				transition: opacity .2s linear;
+				-webkit-transition: opacity .2s linear;
+				-moz-transition: opacity .2s linear;
+				-o-transition: opacity .2s linear;
 			}
 
 			&:after {
@@ -91,10 +90,10 @@ html, body, #root {
 				-moz-transform: rotateY(180deg);
 				-ms-transform: rotateY(180deg);
 				transform: rotateY(180deg);
-				-webkit-transition: all .7s;
-				-moz-transition: all .7s;
-				-o-transition: all .7s;
-				transition: all .7s;
+				-webkit-transition: all .3s;
+				-moz-transition: all .3s;
+				-o-transition: all .3s;
+				transition: all .3s;
 				-webkit-backface-visibility: hidden;
 				-moz-backface-visibility: hidden;
 				backface-visibility: hidden;
@@ -104,7 +103,7 @@ html, body, #root {
 }
 
 button {
-	background: rgba(80, 175, 175, .7);
+	background: rgb(80, 175, 175);
 	border: none;
 	font-size: 2em;
 	cursor: pointer;
