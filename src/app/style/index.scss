@@ -28,6 +28,37 @@ html, body, #root {
 	box-shadow: 0 0 15px 5px rgba(255,255,255, .3);
 	perspective: 1000;
 
+	&:after {
+		content: 'Congratulations!';
+		color: rgb(80, 175, 175);
+		background: #fff;
+		box-shadow: 0 0 5px 2px #fff;
+		font-size: 1.5em;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: fit-content;
+		height: fit-content;
+		margin: auto;
+		opacity: 0;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		-ms-transition: all .5s;
+		-o-transition: all .5s;
+		transition: all .5s;
+	}
+
+	&.finish:after {
+		opacity: 1;
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+
 	@media only screen and (orientation: landscape) {
 		height: 80vh;
 		width: 80vh;
@@ -46,6 +77,7 @@ html, body, #root {
 		box-shadow: 0 0 0 1px gray;
 		-webkit-transition: all .3s;
 		-moz-transition: all .3s;
+		-ms-transition: all .3s;
 		-o-transition: all .3s;
 		transition: all .3s;
 		overflow: hidden;
@@ -58,6 +90,7 @@ html, body, #root {
 			color: #fff;
 			-webkit-transition: all .3s;
 			-moz-transition: all .3s;
+			-ms-transition: all .3s;
 			-o-transition: all .3s;
 			transition: all .3s;
 			display: flex;
@@ -71,9 +104,11 @@ html, body, #root {
 			-webkit-transform: rotateY(180deg);
 			-moz-transform: rotateY(180deg);
 			-ms-transform: rotateY(180deg);
+			-o-transform: rotateY(180deg);
 			transform: rotateY(180deg);
 			-webkit-transition: all .3s;
 			-moz-transition: all .3s;
+			-ms-transition: all .3s;
 			-o-transition: all .3s;
 			transition: all .3s;
 
@@ -82,6 +117,7 @@ html, body, #root {
 				transition: opacity .2s linear;
 				-webkit-transition: opacity .2s linear;
 				-moz-transition: opacity .2s linear;
+				-ms-transition: opacity .2s linear;
 				-o-transition: opacity .2s linear;
 			}
 
@@ -89,13 +125,17 @@ html, body, #root {
 				-webkit-transform: rotateY(180deg);
 				-moz-transform: rotateY(180deg);
 				-ms-transform: rotateY(180deg);
+				-o-transform: rotateY(180deg);
 				transform: rotateY(180deg);
 				-webkit-transition: all .3s;
 				-moz-transition: all .3s;
+				-ms-transition: all .3s;
 				-o-transition: all .3s;
 				transition: all .3s;
 				-webkit-backface-visibility: hidden;
 				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-o-backface-visibility: hidden;
 				backface-visibility: hidden;
 			}
 		}

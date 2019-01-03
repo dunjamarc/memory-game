@@ -17,7 +17,8 @@ class App extends Component {
 				"https://s.inyourpocket.com/gallery/64940.jpg",
 				"http://nomadcapitalist.com/wp-content/uploads/2017/08/Kalemegdan.jpg",
 			],
-			currentPair: []
+			currentPair: [],
+			numOfHidden: 0
 		};
 	}
 
@@ -57,10 +58,15 @@ class App extends Component {
 			setTimeout(() => {
 				pair.forEach(e => e.classList.add("hide"));
 				this.setState({
-					currentPair: []
+					currentPair: [],
+					numOfHidden: this.state.numOfHidden + 2
 				})
 			}, 1000);
-			
+			setTimeout(() => {
+				if(this.state.numOfHidden === 16){
+					document.querySelector(".grid-container").classList.add("finish");
+				}
+			}, 1500);
 		} else if(this.state.currentPair.length > 1 && this.state.currentPair[0] !== this.state.currentPair[1]){
 			setTimeout(() => {
 				pair.forEach(e => {
