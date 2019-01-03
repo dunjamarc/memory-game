@@ -56,12 +56,17 @@ class App extends Component {
 		let pair = document.querySelectorAll(".reveal");
 		if(this.state.currentPair.length > 1 && this.state.currentPair[0] === this.state.currentPair[1]){
 			setTimeout(() => {
-				pair.forEach(e => e.classList.add("hide"));
+				pair.forEach(e => {
+					e.classList.add("hide");
+					e.classList.remove("reveal");
+				});
 				this.setState({
 					currentPair: [],
 					numOfHidden: this.state.numOfHidden + 2
 				})
 			}, 1000);
+			let notHidden = document.querySelectorAll(".grid-item:not(.hide)");
+			notHidden.forEach(e => e.classList.add("block"));
 			setTimeout(() => {
 				if(this.state.numOfHidden === 16){
 					document.querySelector(".grid-container").classList.add("finish");
@@ -69,16 +74,19 @@ class App extends Component {
 			}, 1500);
 		} else if(this.state.currentPair.length > 1 && this.state.currentPair[0] !== this.state.currentPair[1]){
 			setTimeout(() => {
-				pair.forEach(e => {
-					if(!e.classList.contains("hide")){
-						e.classList.remove("reveal");
-					}
-				});
+				pair.forEach(e => e.classList.remove("reveal"));
 				this.setState({
 					currentPair: []
 				})
 			}, 1000);
+
+			let notRevealed = document.querySelectorAll(".grid-item:not(.reveal)");
+			notRevealed.forEach(e => e.classList.add("block"));
 		}
+
+		setTimeout(() => {
+			document.querySelectorAll(".block").forEach(e => e.classList.remove("block"));
+		}, 1500);
 	}
 	
 	reloadPage = () => window.location.reload();

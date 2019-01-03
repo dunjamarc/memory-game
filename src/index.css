@@ -97,13 +97,6 @@ html, body, #root {
       -ms-transition: all .3s;
       -o-transition: all .3s;
       transition: all .3s; }
-      .grid-container .grid-item.reveal.hide {
-        opacity: 0;
-        transition: opacity .2s linear;
-        -webkit-transition: opacity .2s linear;
-        -moz-transition: opacity .2s linear;
-        -ms-transition: opacity .2s linear;
-        -o-transition: opacity .2s linear; }
       .grid-container .grid-item.reveal:after {
         -webkit-transform: rotateY(180deg);
         -moz-transform: rotateY(180deg);
@@ -120,6 +113,15 @@ html, body, #root {
         -ms-backface-visibility: hidden;
         -o-backface-visibility: hidden;
         backface-visibility: hidden; }
+    .grid-container .grid-item.hide {
+      opacity: 0;
+      transition: opacity .2s linear;
+      -webkit-transition: opacity .2s linear;
+      -moz-transition: opacity .2s linear;
+      -ms-transition: opacity .2s linear;
+      -o-transition: opacity .2s linear; }
+    .grid-container .grid-item.block {
+      pointer-events: none; }
 
 button {
   background: #50afaf;

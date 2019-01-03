@@ -112,15 +112,6 @@ html, body, #root {
 			-o-transition: all .3s;
 			transition: all .3s;
 
-			&.hide {
-				opacity: 0;
-				transition: opacity .2s linear;
-				-webkit-transition: opacity .2s linear;
-				-moz-transition: opacity .2s linear;
-				-ms-transition: opacity .2s linear;
-				-o-transition: opacity .2s linear;
-			}
-
 			&:after {
 				-webkit-transform: rotateY(180deg);
 				-moz-transform: rotateY(180deg);
@@ -138,6 +129,19 @@ html, body, #root {
 				-o-backface-visibility: hidden;
 				backface-visibility: hidden;
 			}
+		}
+
+		&.hide {
+			opacity: 0;
+			transition: opacity .2s linear;
+			-webkit-transition: opacity .2s linear;
+			-moz-transition: opacity .2s linear;
+			-ms-transition: opacity .2s linear;
+			-o-transition: opacity .2s linear;
+		}
+
+		&.block {
+			pointer-events: none;
 		}
 	}
 }
